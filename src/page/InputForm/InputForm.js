@@ -30,10 +30,9 @@ export default function InputForm() {
         fetch('https://jsonplaceholder.typicode.com/posts/1', {
         method: 'PUT',
         body: JSON.stringify({
-            id: 1,
-            title: 'foo',
-            body: 'bar',
-            userId: 1,
+            id: userId,
+            title: title,
+            body: body,
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
@@ -44,7 +43,7 @@ export default function InputForm() {
     }
 
     const deleteData=()=>{
-        fetch('https://jsonplaceholder.typicode.com/posts/1', {
+        fetch('https://jsonplaceholder.typicode.com/posts?userId='+userId, {
         method: 'DELETE',
         });
     }
@@ -66,7 +65,7 @@ export default function InputForm() {
         </Form.Group>
 
     <ButtonGroup className='btnGroup'>
-    <Button variant="outline-primary" onClick={saveData}>SAVE</Button>{' '}
+      <Button variant="outline-primary" onClick={saveData}>SAVE</Button>{' '}
       <Button variant="outline-success" onClick={updateData}>UPDATE</Button>{' '}
       <Button variant="outline-warning" onClick={deleteData}>DELETE</Button>{' '}
       </ButtonGroup>
