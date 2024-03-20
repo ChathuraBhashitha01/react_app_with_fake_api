@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import AccordionForm from '../../component/AccordionForm/AccordionForm'
 
 export default function Details() {
@@ -11,9 +11,19 @@ export default function Details() {
 
     }
 
+    useEffect(()=>{
+        loadData();
+    },[])
+
   return (
     <div>
-        <AccordionForm/>
+        {
+            data.map(data=>{
+                return(
+                   <AccordionForm title={data.title} body={data.body}/>
+                )
+            })
+        }
     </div>
   )
 }
