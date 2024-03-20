@@ -22,7 +22,7 @@ export default function InputForm() {
         <Form.Control type="userID" placeholder="Enter UserID" />
         </Form.Group>
 
-    <ButtonGroup>
+    <ButtonGroup className='btnGroup'>
     <Button variant="outline-primary">SAVE</Button>{' '}
       <Button variant="outline-success">UPDATE</Button>{' '}
       <Button variant="outline-warning">DELETE</Button>{' '}
