@@ -5,7 +5,6 @@ import NavigationBar from '../../component/NavigationBar/NavigationBar';
 export default function InputForm() {
   return (
     <>
-    <NavigationBar/>
     <Form>
         <Form.Group className="mb-3" controlId="formGroupEmail">
         <Form.Label>Email address</Form.Label>
