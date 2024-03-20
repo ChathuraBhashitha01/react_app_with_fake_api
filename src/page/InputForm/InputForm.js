@@ -10,7 +10,7 @@ export default function InputForm() {
     const[body,setBody]=useState('')
     const[userId,setUserId]=useState('')
 
-    function dataSave(){
+    function saveData(){
         fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
         body: JSON.stringify({
@@ -66,9 +66,9 @@ export default function InputForm() {
         </Form.Group>
 
     <ButtonGroup className='btnGroup'>
-    <Button variant="outline-primary" onClick={dataSave}>SAVE</Button>{' '}
-      <Button variant="outline-success">UPDATE</Button>{' '}
-      <Button variant="outline-warning">DELETE</Button>{' '}
+    <Button variant="outline-primary" onClick={saveData}>SAVE</Button>{' '}
+      <Button variant="outline-success" onClick={updateData}>UPDATE</Button>{' '}
+      <Button variant="outline-warning" onClick={deleteData}>DELETE</Button>{' '}
       </ButtonGroup>
     </Form>
   </>
