@@ -9,7 +9,6 @@ export default function InputForm() {
     const[title,setTitle]=useState('')
     const[body,setBody]=useState('')
     const[userId,setUserId]=useState('')
-    //const[data,getData]=useState([])
 
     function dataSave(){
         fetch('https://jsonplaceholder.typicode.com/posts', {
